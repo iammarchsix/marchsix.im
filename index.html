@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARCH SIX | GECƏ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             background-color: #050505;
             color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            /* Используем системные шрифты, как на твоем телефоне */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -61,29 +61,37 @@
             border: 1px solid #333;
             color: white;
             text-decoration: none;
-            padding: 18px 20px;
+            padding: 15px 20px; /* Немного уменьшил паддинг */
             border-radius: 10px;
             display: flex;
             align-items: center;
+            justify-content: start; /* Выравнивание по левому краю */
             transition: all 0.3s ease;
         }
 
-        .link-button i {
-            font-size: 20px;
-            width: 30px;
+        /* Стиль для твоих оригинальных логотипов */
+        .link-button img {
+            height: 24px; /* Фиксированная высота для всех лого */
+            max-width: 100px; /* Чтобы широкие лого (как Yandex Music) не растягивались */
             margin-right: 15px;
+            object-fit: contain; /* Чтобы лого не искажались */
         }
 
         .link-button span {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 500;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px; /* Уменьшил letter-spacing для текста */
         }
 
         .link-button:hover {
             background: #ffffff;
             color: #000000;
             transform: translateY(-2px);
+        }
+
+        /* Инверсия цветов лого при наведении */
+        .link-button:hover img {
+            filter: invert(1); /* Делаем лого черным, если фон белый */
         }
 
         /* Сетка соцсетей */
@@ -102,6 +110,7 @@
             border-radius: 10px;
             font-size: 20px;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .social-item:hover {
@@ -136,31 +145,31 @@
 
         <div class="music-links">
             <a href="#" class="link-button">
-                <i class="fab fa-apple"></i>
+                <img src="icons/apple.png" alt="Apple Music">
                 <span>Apple Music</span>
             </a>
             <a href="#" class="link-button">
-                <i class="fab fa-youtube"></i>
+                <img src="icons/youtube.png" alt="YouTube Music">
                 <span>YouTube Music</span>
             </a>
             <a href="#" class="link-button">
-                <i class="fas fa-music"></i>
+                <img src="icons/yandex.png" alt="Yandex Music">
                 <span>Yandex Music</span>
             </a>
             <a href="#" class="link-button">
-                <i class="fab fa-spotify"></i>
+                <img src="icons/spotify.png" alt="Spotify">
                 <span>Spotify</span>
             </a>
             <a href="#" class="link-button">
-                <i class="fab fa-soundcloud"></i>
+                <img src="icons/soundcloud.png" alt="SoundCloud">
                 <span>SoundCloud</span>
             </a>
         </div>
 
         <div class="social-grid">
-            <a href="https://instagram.com/iammarchsix" class="social-item"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-item"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="social-item"><i class="fab fa-telegram"></i></a>
+            <a href="https://instagram.com/iammarchsix" class="social-item"><img src="icons/instagram.png" alt="Instagram" style="height:20px; width:auto; filter: invert(0);"></a>
+            <a href="#" class="social-item"><img src="icons/tiktok.png" alt="TikTok" style="height:20px; width:auto; filter: invert(0);"></a>
+            <a href="#" class="social-item"><img src="icons/telegram.png" alt="Telegram" style="height:20px; width:auto; filter: invert(0);"></a>
         </div>
 
         <div class="footer">

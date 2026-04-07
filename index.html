@@ -16,13 +16,9 @@
             margin: 0;
             padding: 40px 20px;
         }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-
+        .container { width: 100%; max-width: 400px; text-align: center; }
+        
+        /* ОБЛОЖКА */
         .cover {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -32,30 +28,15 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.8);
         }
 
-        h1 {
-            font-size: 28px;
-            letter-spacing: 6px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
+        h1 { font-size: 28px; letter-spacing: 6px; margin-bottom: 8px; text-transform: uppercase; }
+        .status { color: #888; font-size: 14px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; }
 
-        .status {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-               /* Кнопки музыки */
+        /* КНОПКИ МУЗЫКИ */
         .music-links {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Это стандартный отступ между кнопками */
-            /* Убрали лишний margin-bottom */
+            gap: 12px; /* Расстояние между кнопками */
         }
-
         .link-button {
             background: #1a1a1a;
             border: 1px solid #333;
@@ -67,34 +48,16 @@
             align-items: center;
             transition: all 0.3s ease;
         }
+        .link-button i { font-size: 20px; width: 30px; margin-right: 15px; }
+        .link-button:hover { background: #ffffff; color: #000000; transform: translateY(-2px); }
 
-        .link-button i {
-            font-size: 20px;
-            width: 30px;
-            margin-right: 15px;
-        }
-
-        .link-button span {
-            font-size: 15px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .link-button:hover {
-            background: #ffffff;
-            color: #000000;
-            transform: translateY(-2px);
-        }
-
-              /* Сетка соцсетей */
+        /* СЕТКА СОЦСЕТЕЙ */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px; /* Расстояние между самими иконками (Insta, TikTok, TG) */
-            margin-top: 12px; /* Теперь расстояние до SoundCloud такое же, как между остальными кнопками */
+            gap: 10px;
+            margin-top: 12px; /* ИДЕАЛЬНОЕ РАССТОЯНИЕ ОТ SOUNDCLOUD */
         }
-
-
         .social-item {
             background: #1a1a1a;
             border: 1px solid #333;
@@ -103,59 +66,28 @@
             border-radius: 10px;
             font-size: 20px;
             transition: all 0.3s ease;
+            text-align: center;
         }
+        .social-item:hover { background: #ffffff; color: #000000; }
 
-        .social-item:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .footer {
-            margin-top: 60px;
-            font-size: 10px;
-            color: #444;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .booking {
-            display: block;
-            margin-bottom: 10px;
-            color: #666;
-            text-decoration: none;
-            font-size: 12px;
-        }
+        .footer { margin-top: 60px; font-size: 10px; color: #444; letter-spacing: 2px; text-transform: uppercase; }
+        .booking { display: block; margin-bottom: 10px; color: #666; text-decoration: none; font-size: 12px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="cover.jpg" alt="MARCH SIX" class="cover">
+        <img src="cover.webp" alt="MARCH SIX" class="cover" loading="eager">
 
         <h1>MARCH SIX</h1>
         <div class="status">GECƏ — OUT SOON</div>
 
         <div class="music-links">
-            <a href="#" class="link-button">
-                <i class="fab fa-apple"></i>
-                <span>Apple Music</span>
-            </a>
-            <a href="#" class="link-button">
-                <i class="fab fa-youtube"></i>
-                <span>YouTube Music</span>
-            </a>
-            <a href="#" class="link-button">
-                <i class="fas fa-music"></i>
-                <span>Yandex Music</span>
-            </a>
-            <a href="#" class="link-button">
-                <i class="fab fa-spotify"></i>
-                <span>Spotify</span>
-            </a>
-            <a href="#" class="link-button">
-                <i class="fab fa-soundcloud"></i>
-                <span>SoundCloud</span>
-            </a>
+            <a href="#" class="link-button"><i class="fab fa-apple"></i><span>Apple Music</span></a>
+            <a href="#" class="link-button"><i class="fab fa-youtube"></i><span>YouTube Music</span></a>
+            <a href="#" class="link-button"><i class="fas fa-music"></i><span>Yandex Music</span></a>
+            <a href="#" class="link-button"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+            <a href="#" class="link-button"><i class="fab fa-soundcloud"></i><span>SoundCloud</span></a>
         </div>
 
         <div class="social-grid">

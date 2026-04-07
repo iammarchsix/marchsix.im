@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARCH SIX | GECƏ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background-color: #050505; /* Глубокий черный */
+            background-color: #050505;
             color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .container {
@@ -25,78 +24,147 @@
         }
 
         .cover {
-            width: 250px;
-            height: 250px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin-bottom: 25px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 15px;
+            margin-bottom: 30px;
             object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
         }
 
         h1 {
-            font-size: 24px;
-            letter-spacing: 4px;
-            margin-bottom: 5px;
+            font-size: 28px;
+            letter-spacing: 6px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .status {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        p {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 35px;
-            letter-spacing: 1px;
-        }
-
-        .links {
+        /* Кнопки музыки */
+        .music-links {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            margin-bottom: 30px;
         }
 
         .link-button {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1a1a1a;
+            border: 1px solid #333;
             color: white;
             text-decoration: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-weight: 500;
+            padding: 18px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 2px;
+        }
+
+        .link-button i {
+            font-size: 20px;
+            width: 30px;
+            margin-right: 15px;
+        }
+
+        .link-button span {
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         .link-button:hover {
             background: #ffffff;
             color: #000000;
+            transform: translateY(-2px);
+        }
+
+        /* Сетка соцсетей */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-item {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-item:hover {
+            background: #ffffff;
+            color: #000000;
         }
 
         .footer {
-            margin-top: 50px;
-            font-size: 11px;
+            margin-top: 60px;
+            font-size: 10px;
             color: #444;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .booking {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="cover.jpg" alt="GECƏ Cover" class="cover">
+        <img src="cover.jpg" alt="MARCH SIX" class="cover">
 
         <h1>MARCH SIX</h1>
-        <p>GECƏ — OUT SOON</p>
+        <div class="status">GECƏ — OUT SOON</div>
 
-        <div class="links">
-            <a href="https://instagram.com/iammarchsix" class="link-button" target="_blank">Instagram</a>
-            <a href="https://youtube.com" class="link-button" target="_blank">YouTube</a>
-            <a href="https://music.apple.com" class="link-button" target="_blank">Apple Music</a>
-            <a href="https://spotify.com" class="link-button" target="_blank">Spotify</a>
-            <a href="mailto:booking@marchsix.im" class="link-button">Booking</a>
+        <div class="music-links">
+            <a href="#" class="link-button">
+                <i class="fab fa-apple"></i>
+                <span>Apple Music</span>
+            </a>
+            <a href="#" class="link-button">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube Music</span>
+            </a>
+            <a href="#" class="link-button">
+                <i class="fas fa-music"></i>
+                <span>Yandex Music</span>
+            </a>
+            <a href="#" class="link-button">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </a>
+            <a href="#" class="link-button">
+                <i class="fab fa-soundcloud"></i>
+                <span>SoundCloud</span>
+            </a>
+        </div>
+
+        <div class="social-grid">
+            <a href="https://instagram.com/iammarchsix" class="social-item"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-item"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-item"><i class="fab fa-telegram"></i></a>
         </div>
 
         <div class="footer">
+            <a href="mailto:booking@marchsix.im" class="booking">booking@marchsix.im</a>
             © 2026 MARCH SIX
         </div>
     </div>
